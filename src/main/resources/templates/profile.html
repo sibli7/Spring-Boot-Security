@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+
+	<section class="text-center">
+		<h2>User Profile Page</h2>
+		<div sec:authorize='isAuthenticated()'>
+			<p th:text="${user.name}"></p>
+			<p th:text="${user.email}"></p>
+			<p th:text="${user.role}"></p>
+			<p th:text="${user.mobileNo}"></p>
+		</div>
+
+	
+
+
+		<!-- <h4>Name: [[${user.name}]]</h4>
+		<h4>Email: [[${user.email}]]</h4>
+		<h4>Mob No: [[${user.mobileNo}]]</h4>
+		<h4>Role: [[${user.role}]]</h4> -->
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="logout">
+		</form>
+		<a href="/logout">Sign-out</a>
+		<div sec:authorize="hasRole('USER')">Text visible to user.</div>
+		<a class="dropdown-item" sec:authentication="principal.name"></a>
+		<a class="dropdown-item" sec:authentication="principal.mobile_no"></a>
+		<a class="dropdown-item" sec:authentication="name"></a>
+			
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+
+.details_body{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    width: 100%;
+    /* padding:18px; */
+    /* margin: 10px 5px; */
+    /* background-color: green; */
+
+}
+.product_box{
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+    width: 70%;
+    background-color: #efefef;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-right: 5px;
+    padding:5px;
+
+}
+.product_img{
+    width: 40%;
+    /* margin:5px; */
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.product_des{
+    width: 60%;
+    margin: 0 10px;
+    /* padding:0 12px; */
+
+}
+.product_des>h2{
+    background-color: blueviolet;
+    padding:7px;
+    color:white;
+
+}
+.specifications{
+    display: flex;
+    flex-wrap: wrap;
+}
+#specification{
+    background-color: #efefef;
+    margin:5px;
+    padding:5px;
+    border-radius: 4px;
+}
+.colors{
+    display: flex;
+    justify-content: start;
+}
+.color{
+    margin:5px;
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button>button{
+    background-color: blueviolet;
+    padding:7px 40px;
+    border:0;
+    color:white;
+}
+/* ............side bar css..................... */
+.side_bar{
+    width: 30%;
+    margin:0 5px;
+
+}
+
+.item_one{
+    display:flex;
+    background-color: aliceblue;
+    margin:4px 0;
+
+}
+.side_img{
+    width: 30%;
+    background-color: rgb(35, 33, 33);
+}
+.side_t{
+    width: 70%;
+    text-align: start;
+    padding:5px;
+}
+.side_img>img{
+    height: 100px;
+    width:100px;
+}
+/* <!-- ............product purchase form........display none............. --> */
+.buy_form_backdrop{
+    background-color: #08050567;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    padding:10px;
+    position:fixed;
+     top:50%; 
+     left: 50%; 
+     transform: translate(-50%,-50%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    display: none;
+
+
+}
+#product_b_form{
+    /* display: none; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #efefef;
+     /* height: 400px; */
+     width: 300px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: baseline;
+     gap:10px;
+     padding:10px;
+     position:relative;
+     top:50%; 
+     left: 50%; 
+     transform: translate(-50%,-50%);
+     
+}
+#close_buy_form{
+    position: absolute;
+    top:1px;
+    right:10px;
+    font-size: 25px;
+    color:red;
+    font-weight: 600;
+    z-index: 111;
+
+}
+#close_buy_form:hover{
+    cursor: pointer;
+}
+#close_buy_form:hover{
+    cursor: pointer;
+}
+#product_b_form::backdrop{
+
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+   
+    .details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product_img{
+        
+        width: 100%;
+    }
+    .product_des{
+        width: 100%;
+    }
+    .side_bar{
+        width: 100%;
+        margin:10px 5px 5px 5px;
+    
+    }
+    .side_img>img{
+        height: 200px;
+        width:200px;
+    }
+
+}
+@media (min-width:768px){
+   
+    .details_body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        /* padding:18px; */
+    
+    }
+    .product_box{
+        width: 100%;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .product_img{
+        width: 100%;
+    }
+    .product_des{
+        width: 100%;
+        margin:0;
+    }
+    .side_bar{
+        width: 100%;
+        margin:10px 5px 5px 5px;
+    }
+  
+}
+@media screen and  (min-width:992px){
+    .details_body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        /* padding:18px; */
+    
+    }
+    .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .product_img{
+        width: 100%;
+    }
+    .product_des{
+        width: 100%;
+        margin:0 10px;
+    }
+    .product_box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #efefef;
+    }
+    .side_bar{
+        width: 100%;
+        margin:10px 5px 5px 5px;
+    
+    }
+    .side_img>img{
+        height: 150px;
+        width:150px;
+    }
+   
+}
+@media screen and (min-width:1200px){
+    .details_body{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:flex-start;
+        width: 100%;
+        padding:18px;
+        /* margin: 10px 5px; */
+        /* background-color: green; */
+    
+    }
+    .product_box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 70%;
+        background-color: #efefef;
+    }
+    .details{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-right: 5px;
+        padding:5px;
+    
+    }
+    .product_img{
+        width: 40%;
+        /* margin:5px; */
+    
+    }
+    
+    .product_des{
+        width: 60%;
+        margin: 0 10px;
+        /* padding:10px; */
+    
+    }
+    .product_des>h2{
+        background-color: blueviolet;
+        padding:7px;
+        color:white;
+    
+    }
+    .specifications{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #specification{
+        background-color: #efefef;
+        margin:5px;
+        padding:5px;
+        border-radius: 4px;
+    }
+    .colors{
+        display: flex;
+        justify-content: start;
+    }
+    .color{
+        margin:5px;
+    }
+    .button{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .button>button{
+        background-color: blueviolet;
+        padding:7px 40px;
+        border:0;
+        color:white;
+    }
+    /* ............side bar css..................... */
+    .side_bar{
+        width: 30%;
+        margin:0 5px;
+    
+    }
+    
+    .item_one{
+        display:flex;
+        background-color: aliceblue;
+        margin:4px 0;
+    
+    }
+    .side_img{
+        width: 30%;
+        background-color: rgb(35, 33, 33);
+    }
+    .side_t{
+        width: 70%;
+        text-align: start;
+        padding:5px;
+    }
+    .side_img>img{
+        height: 100px;
+        width:100px;
+    }
+  
+
+}

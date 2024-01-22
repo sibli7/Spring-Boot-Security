@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+ 
+
+
+	<section>
+          <div class="details_body">
+               <div class="product_box">
+                    <div class="details">
+                         <div class="product_img">
+                              <img  style="height: 400px; width:100%" th:src="@{/styles/photos/black.png}" alt="Example Image" />
+                         </div>
+                         <div class="product_des">
+                              <h2 >Title : Nikon Camera</h2>
+                              <div class="specifications">
+                                   <i id="specification">Price : 12,222</i>
+                                   <i id="specification">Brand : Nikon</i>
+                                   <i id="specification">Status : In stock</i>
+                                   <i id="specification">Product Code : CS-12244</i>
+                              </div>
+                                   
+                              <h4>Description : </h4>
+                              <p> Lipsum generator.Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                              <div class="colors" style="display: flex; justify-content: space-between;">
+                                   <div class="clr d-flex ">
+                                        <div class="color">
+                                             <input style="height: 15px; width: 15px;" type="radio" name="color">
+                                             <div id="black">Black</div>
+                                        </div>
+                                        <div class="color">
+                                             <input style="height: 15px; width: 15px;" type="radio" name="color">
+                                             <div id="blue">Blue</div>
+                                        </div>
+                                        <div class="color">
+                                             <input style="height: 15px; width: 15px;" type="radio" name="color">
+                                             <div id="white">White</div>
+                                        </div>
+                                   </div>
+                                   <div class="qnty">
+                                        <div class="increase_btn d-flex flex-row justify-centent-center align-items-center">
+                                             <button id="pro_discrease_btn" style="height: 32px;width:40px;border:1px solid #ddd;">-</button><input id="pro_qnty_show" style="width: 60px; height: 30px; margin: 0; padding:0;background-color: #ddd;" type="text"><button id="pro_increase_btn" style="height: 32px;width:40px;border:1px solid #ddd;">+</button>
+                                        </div>
+                                   </div>
+                                   
+                              </div>
+                              <div class="button">
+                                   <button id="add_to_cart">Add to Cart</button> <button id="buy_form">Buy Now</button>
+                              </div>
+                         </div>
+                    </div>  
+                    <div class="descriptions">
+                         <h2>Products Specifications</h2>
+                         
+                    </div>                 
+               </div>
+               <div class="side_bar">
+                    <h3 style="background-color: blueviolet; color:white; padding:10px;">Related Products</h3>
+                    <div class="items">
+                        
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                         <div class="item_one">
+                              <div class="side_img pr-2">
+                                   <img th:src="@{/styles/photos/samsung.png}" alt="Example Image" />
+                              </div>
+                              <div class="side_t">
+                                   <b>Camera Nikon</b>
+                                   <h6 class="text-danger">price : 12,222 tk</h6>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+
+
+         <!-- ............product purchase form........display none............. -->
+         <div class="buy_form_backdrop">
+          <div id="product_b_form"  class="pro_buy_form">
+               <span id="close_buy_form">X</span>
+                    <div class="pro_b d-flex flex-column justify-centent-center">
+                         <div class="des">
+                              <p class="text-success">You have added <span class="text-danger">samsung ultra s23</span> to your shoping cart</p>
+                         </div>
+     
+                         <div class="quantity d-flex flex-column justify-centent-center align-items-center">
+                              <button style="color:black; width: 200px; border:1px solid #ddd; margin:3px; height: 40px;;">Cart Quantity : 1</button>
+                              <button style="color:black; width: 200px; border:1px solid #ddd; margin:3px; height: 40px;;">Cart Total : 190,000</button>
+                         </div>
+                    </div>
+                    <div class="pro_btn d-flex  flex-column justify-centent-center align-items-center align-self-center">
+                         <input  class="bg-primary" type="submit" value="View Cart">
+                         <input   class="bg-primary" type="submit" value="Confirm Order">
+                    </div>
+              </div>
+         </div>
+       
+
+
+        
+          
+       
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>register</title>
+<style>
+	
+
+</style>
+</head>
+<body>
+	<section>
+		<div class="container  mt-5">
+			<div class="reg_title text-end">
+				<h2>Register</h2>
+			</div>
+
+
+			<th:block th:if="${session.msg}">
+				<p class="text-center text-light bg-success p-2 ">[[${session.msg}]]</p>
+				<th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>
+
+			</th:block>
+
+			<form action="saveUser" method="post">
+				
+
+				<input  type="text" name="name" id="name" placeholder="Username">
+				<input  type="email" name="email" id="email" placeholder="Email">
+				<input  type="phone" name="mobileNo" id="mobileNo" placeholder="Phone Number">
+				<input  type="text" name="role" id="role" placeholder="User Role">
+				<input  type="password" name="password" id="password" placeholder="Password">
+
+				<input class="btn btn-primary" type="submit" value="Register">
+			</form>
+		</div>
+		
+			
+
+
+
+
+
+
+	</section>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+	
+
+
+	<section class="text-center">
+        <h2 style="margin-top: 0;">Student Table : </h2>
+        <br>
+
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name </th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Department</th>
+              <th scope="col">Batch</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="user: ${student}">
+              <th th:text="${user.name}"></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+        
+
+	</section>
+
+</body>
+</html>
